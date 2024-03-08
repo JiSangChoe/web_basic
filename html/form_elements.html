@@ -4,36 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML 폼 요소</title>
-    <script>
+    <style>
+        #inputBox {
+          opacity: 0;
+          transition: opacity 0.5s ease-out;
+        }
+  </style>
+  <script>
         function toggleInput() {
           var inputBox = document.getElementById("inputBox");
           var checkbox = document.getElementById("toggleCheckbox");
-    
+  
           if (checkbox.checked) {
-            inputBox.style.display = "none";
+            inputBox.style.opacity = "0";
+            setTimeout(function () {
+              inputBox.style.display = "none";
+            }, 500);
           } else {
             inputBox.style.display = "block";
+            setTimeout(function () {
+              inputBox.style.opacity = "1";
+            }, 50);
           }
         }
-      </script> 
-
-    <style>
-        .jb {
-        box-sizing: border-box;
-        width: 64px;
-        height: 64px;
-        margin: 10px 0px;
-        background-color: orange;
-        border-radius: 100%;
-        transition: all ease 2s 0s;
-        }
-        input:checked ~ .jb {
-        width: 100%;
-        height: 200px;
-        border-radius: 0;
-        background-color: red;
-        }
-        </style>
+      </script>
 </head>
 <body>
     <!-- 
@@ -86,14 +80,11 @@
     <input type="checkbox" name="d"/>
     <input type="checkbox" name="d"/>
 
-<!------------------------------------------------------------------------------------>    
-    <!-- 동현이 코드-->
-    <input type="checkbox">
-        <div class="jb"></div
+<!------------------------------------------------------------------------------------>         <!-- 동현이 코드-->   
     <input type="checkbox" id="toggleCheckbox" onclick="toggleInput()" />
-            은신술 !
-            <br /><br />
-    <input type="text" id="inputBox" placeholder="앙 기모띠" style="display: block"/>
+    저를 눌러보세용
+    <br /><br />
+    <h3 id="inputBox">앙 기모띠</h3>
     <!-- 동현이 코드-->
 <!------------------------------------------------------------------------------------>
 

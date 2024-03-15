@@ -23,19 +23,36 @@ body{
     
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 60px;
 
-    min-width: 1300px;
-    width: 1300px;
+    min-width: 1712px;
+    width: 1712px;
     
+}
+.title-box {
+    font-size: 52px;
+    line-height: 78px;
+    letter-spacing: -1px;
+    font-family: 'KakaoBold', sans-serif;
+    font-weight: 400;
+}
+.title-box::before{
+    background-image: url(https://www.kakaocorp.com/page/ico_tit_service.gif);
+    width: 78px;
+    height: 78px;
+    display: inline-block;
+    content: "";
+    background-size: 100%;
+    vertical-align: top;
 }
 
 /* Contents Box */
 .contents-box{
-    
     display: grid;
     grid-template: 
         "comunication busniess" 180px
+        "life-style shopping" 180px
+        "entertainment social" 180px
     / 1fr 1fr;
     gap:16px;
 }
@@ -47,14 +64,9 @@ body{
     align-items: center;
     padding: 0px 64px;
 }
-.나팔 {
-    background-image: url(https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/6562f7bc017800001.png?type=thumb&opt=C72x72.fwebp);
-    
-}
-
 .content-title{
     font-size: 30px;
-    font-weight: 200;
+    font-weight: 700;
 }
 .content-icons-box {
     display: flex;
@@ -64,7 +76,8 @@ body{
     width: 56px;
     height: 56px;
     border-radius: 12px;
-    background-size: 100%;  
+    background-size: 100%;
+    
 }
 .icon-button:hover{
     cursor: pointer;
@@ -72,7 +85,12 @@ body{
 .kakaotalk {
     background-image:url(https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c9424536018c00001.png)
 }
-
+.daum{
+    background-image: url(https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c9425290018c00001.png);
+}
+.story{
+    background-image: url(https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c942653a018c00001.png);
+}
 
 .more {
     background-color: rgba(0,0,0,0.4);
@@ -87,27 +105,23 @@ body{
 
 /* More Box */
 .more-box{
-    display: grid;
-    grid-template: 
-        "news release resources" 180px
-    / 1fr 1fr 1fr;
-    gap:16px;
-    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    
     
 }
 .more-button{
-    padding: 0px 30px 0px 30px;
-    height: 180px;
+    width: 316px;
+    height: 76px;
     background-color: rgba(240,240,240,1);
     font-size: 24px;
-    border-radius: 24px; /* 높이의 반*/
+    letter-spacing: -0.4px;
+    border-radius: 38px; /* 높이의 반*/
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 4px;
 }
-.round-black {
-    justify-content: flex-end;
-} 
 .more-button:hover{
     cursor: pointer;
 }

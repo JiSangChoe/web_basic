@@ -95,6 +95,6 @@ var obj = {};
 obj = null;
 
 // var element = document.getElementsByClassName('.class');
-// console.log(element);
+//console.log(element);
 
 

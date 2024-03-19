@@ -116,9 +116,9 @@ console.log('==============================');
 */
 count = 0;
 while (true) {
+    if (count === 10) break;
     if (count % 2 === 0) {
-        if (count === 10) break;
-        count++;  // 이게 없으면 무한 루프에 빠짐
+        count++;
         continue;
     }
     console.log(count++);

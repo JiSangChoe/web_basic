@@ -64,7 +64,7 @@ console.log(1 + '1');
 console.log(1 + 't');
 console.log('A method Start : ' + 10 + 'sec')
 console.log('A method End : ' + 20 + 'sec')
-console.log('A method : ' + 20 + 10 + 'sec') //주의하기
+console.log('A method : ' + (20 + 10) + 'sec') //주의하기()를 넣으면 해결됨 ㅇㅇ
 
 /*
     할당 연산자 : 

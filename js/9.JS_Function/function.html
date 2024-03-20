@@ -19,6 +19,18 @@
             const b = document.getElementById('b');
             document.getElementById('result').innerText = Number(a.value) + Number(b.value); 
         });
+
+    </script>
+
+    <script>
+        // 콜백함수 표현식으로 한것
+        const minusButtonClickEventHandler = function() {
+            const a = document.getElementById('a');
+            const b = document.getElementById('b');
+            document.getElementById('result').innerText = Number(a.value) - Number(b.value);
+        }
+        const minusButton = document.getElementById('minus-button');
+        minusButton.addEventListener('click', minusButtonClickEventHandler);
     </script>
 
 </body>

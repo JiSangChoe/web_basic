@@ -143,7 +143,7 @@ result3 = number > 0 ? '양수':
     - && : 좌항과 우항이 모두 true 이면 true, 그렇지 않으면 false
     - ! : 우항을 부정, 우항이 true이면 false, false이면 true
 */
-console.log(true || '홍길동'); true 
+console.log(true || '홍길동'); // true 
 console.log(false || '홍길동'); // 홍길동
 console.log(true && '홍길동'); // 홍길동
 console.log(false && '홍길동'); // false (&&을 이용해서 이미 false기 때문에)

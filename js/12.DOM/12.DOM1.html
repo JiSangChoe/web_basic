@@ -8,7 +8,7 @@
 </head>
 
 <body>
-
+    <input type="date"/>
     <div class="sign-in-box">
         <h1 class="title">로그인</h1>
         <form id="sign-in-form">
@@ -27,23 +27,30 @@
 
         /*
             document.getElementById(id) : 
-            -
-            - 
-            - 
-            - 
+            - id 속성 값으로 요소를 하나 선택
+            - 만약 동일한 id가 여러개 존재한다면 최상위에 있는 요소만 선택 
+            - HTMLElement를 상속 받은 객체를 반환
+            - 모든 브라우저에서 사용가능
         */
-        
+        const userIdInputElement = document.getElementById('user-id');
+        const userPwInputElement = document.getElementById('user-pw');
+        console.log(userIdInputElement);
+        console.log(userPwInputElement);
 
 
         console.log('==============================');
 
         /*
             document.querySelector(cssSelector) : 
-            - 
-            - 
-            - 
+            - CSS 선택자를 사용하여 요소를 하나 선택
+            - 복수개가 선택된다면 최상위 하나의 요소만 선택
+            - HTMLElement를 상속받은 객체를 반환
+            - IE8 이상에서만 사용 가능
          */
-        
+
+         // querySelector() 지정할 때 개발자 도구를 켜서 선택자를 copy하면 됨
+        const signInTitleElement = document.querySelector('body > div > h1') // body의 자식이면서 div의 자식인 h1에 대해서 특정할 때
+        console.log(signInTitleElement);
         
 
         console.log('==============================');
@@ -54,11 +61,16 @@
 
         /*
             document.getElementsByClassName(class)
-            - 
-            - 
-            - 
-            - 
+            - class 속성 값으로 요소를 모두 선택
+            - 공백으로 구분하여 여러개의 class를 지정하여 선택할 수 있음
+            - HTMLCollection을 반환 (반복가능)
+            - IE9 이상의 브라우저에서 동작
         */
+        const customInputElements = document.getElementsByClassName('custom-input');
+
+        for(const element of customInputElements) {
+            console.log(element);
+        }
         
         
 
@@ -66,22 +78,30 @@
 
         /*
             document.getElementsByTagName(tagName)
-            - 
-            - 
-            - 
+            - 태그명으로 요소를 모두 선택
+            - HTMLCollection을 반환 (바뀐값 순간순간 마다 값을 가져옴)
+            - 모든 브라우저에서 동작
         */
-        
+        const inputeElements = document.getElementsByTagName('input');
+
+        for (const element of inputeElements) {
+            console.log(element);
+        }
         
 
         console.log('==============================');
 
         /*
             document.querySelectorAll(selector)
-            - 
-            - 
-            - 
+            - 지정된 선택자를 사용하여 요소를 모두 선택
+            - NodeList를 반환 (바뀐 그순간에만 가져옴)
+            - IE8 이상에서 동작
         */
+        const formInputElements = document.querySelectorAll('form > input');
         
+        for (const element of formInputElements) {
+            console.log(formInputElements);
+        }
         
 
         console.log('==============================');
@@ -92,21 +112,24 @@
 
         /*
             parentNode
-            - 
-            - 
-            - 
+            - 부모 요소를 탐색
+            - HTMLElement를 상속받은 객체
+            - 모든 브라우저에서 동작
         */
-        
+        console.log(userIdInputElement.parentNode);
         
 
         console.log('==============================');
 
         /*
             firstElementChild, lastElementChild
-            - 
-            - 
-            - 
+            - 자식 요소 선택
+            - HTMLElement를 상속받은 객체를 반환
+            - IE9 이상에서 동작
         */
+        const signInFormElement = document.getElementById('sign-in-form');
+        console.log(signInFormElement.firstElementChild);
+        console.log(signInFormElement.lastElementChild);
         
 
 

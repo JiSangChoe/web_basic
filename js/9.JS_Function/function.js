@@ -8,7 +8,7 @@
 function add (x, y) {
     return x + y;
 }
-add(1,2); // 함수 호출
+add(1,2); // 함수 호출과 동시에 값을 대입
 
 /*
     함수 표현식 : 함수도 객체 리터럴 방식으로 정의할 수 있고 (함수를) 변수에 할당할 수 있음
@@ -21,7 +21,7 @@ let fun1 = add;
 const fun2 = function add2(x, y) {  
     return x + y;
 } 
-fun2(1, 2); // 이런식으로 함수 호출 가능
+fun2(1, 2); // 기명 함수 표현식인 변수 자체로 함수 호출 가능
 
 console.log(fun1(1,2));
 console.log(fun2(1,2));

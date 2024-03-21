@@ -23,7 +23,7 @@ console.log('==============================');
 
 /*
     불리언 타입으로 형변환
-    - '', 0, -0, NaN, null, undefined는 false, 그 이외의 데이터에 대해서는 true로 변경하여 연산을 진행
+    - '', 0, -0, NaN, null, undefined는 false-> 출력x, 그 이외의 데이터에 대해서는 true로 변경하여 연산을 진행
 */
 if (null) console.log('null');
 if (!null) console.log('not null');

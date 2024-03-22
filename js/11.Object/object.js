@@ -135,20 +135,32 @@ sunJong.name = '이척';
 console.log(sunJong.name);
 console.log(goJong.name);
 
+goJong.name = '이형' // 원래대로 바꿈
+console.log(goJong);
+
+console.log('============방법1==================');
+
 // 방법1 단순무식
 sunJong = {
     name : goJong.name,
     age : goJong.age,
     address : goJong.address
 }
+sunJong.name = '이척';
+console.log(sunJong);
+console.log(goJong);
 
-// 방법2 for-in
+console.log('=============방법2=================');
+
+// 방법2 for-in - 빈객체를 만든뒤 for-in문을 사용
 sunJong = {};
+console.log(sunJong);
 for (const key in goJong) {
     sunJong[key] = goJong[key];
 }
 console.log(sunJong);
 
+console.log('=============방법3=================');
 
 sunJong = {};
 console.log(sunJong);

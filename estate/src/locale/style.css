@@ -1,0 +1,48 @@
+#wrapper {
+    display: grid;
+    grid-template: 
+        "logo topbar" 77px
+        "sidenav main" minmax(944px, auto)
+        / 257px minmax(1182px, 1fr);                 
+}
+
+.logo-container {
+    grid-area: logo;
+    
+    /*구역안에flex를 만들어서 중앙정렬*/
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+
+    border-bottom: 1px solid rgba(233,236,239,1);
+
+    /*폰트스타일 적용*/
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 173%;
+    color: rgba(64,64,64,1);
+}
+
+.top-bar-container {
+    grid-area: topbar;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 24px; /*좌우측만 24px로 패딩*/
+    
+    border-left: 1px solid rgba(233,236,239,1);
+    border-bottom: 1px solid rgba(233,236,239,1);
+}
+
+.side-navigation-container{
+    grid-area: sidenav;
+    
+}
+
+.main-container {
+    grid-area: main;
+    
+}

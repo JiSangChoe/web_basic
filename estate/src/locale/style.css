@@ -1,4 +1,5 @@
 #wrapper {
+    /*그리드형식(2차원)으로 만들껀데 아래와 같이 만들꺼임*/
     display: grid;
     grid-template: 
         "logo topbar" 77px
@@ -14,6 +15,7 @@
     justify-content: center;
     align-items: center; 
 
+    /*하단부분 경계를 지정할껀데 색깔을 이렇게 함*/
     border-bottom: 1px solid rgba(233,236,239,1);
 
     /*폰트스타일 적용*/
@@ -27,6 +29,7 @@
 .top-bar-container {
     grid-area: topbar;
 
+    /*tobar를 flex로 지정하고 정렬을 양끝으로 한다음 중앙정렬하겠디*/
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,12 +40,77 @@
     border-bottom: 1px solid rgba(233,236,239,1);
 }
 
+/*top-bar-title의 스타일 적용*/
+.top-bar-title {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    color: rgba(64,64,64,1);
+}
+
 .side-navigation-container{
     grid-area: sidenav;
-    
+    padding: 16px 12px; /*위아래로 16px 좌우로 12px*/
+
+    display: flex;
+    flex-direction: column; /*flex가 쌓이는 방향: 아래로*/
+    gap: 10px; /*그 쌓이는 것들의 간격*/
+}
+
+/*각각의 요소(3개)에 대한 스타일*/
+.side-navigation-item {
+    border-radius: 6px; /*겉테두리를 둥글개*/
+    padding: 8px 24px;
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    color: rgba(138,146,166,1);
+}
+
+/*버튼을 클릭하기 위한것*/
+.side-navigation-item:hover {
+    cursor: pointer;
+    opacity: 0.85;
+}
+
+.side-navigation-item.active {
+    background-color: rgba(58,87,232,1);
+    color: rgba(255,255,255,1);
+}
+
+/*side-navigation안에 들어갈 아이콘의 크기 지정*/
+.side-navigation-icon {
+    width: 24px;
+    height: 24px;
+    background-size: 100% 100%;
+}
+
+/*아이콘 및 그림을 적용하는거*/
+.side-navigation-icon.chart{
+    background-image: url(../../resource/image/chart-icon.png);
+}
+
+.side-navigation-icon.pie{
+    background-image: url(../../resource/image/pie-icon.png);
+}
+
+.side-navigation-icon.edit{
+    background-image: url(../../resource/image/edit-icon.png);
+}
+
+.side-navigation-title {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 .main-container {
     grid-area: main;
-    
+    padding: 24px;
+    background-color: rgba(238,238,238,0.5);
 }

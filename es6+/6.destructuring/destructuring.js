@@ -30,7 +30,9 @@ let fruits = ['apple', 'banana', 'melon', 'mango', 'orange'];
     - 할당 기준은 인덱스
 */
 // let fruits = ['apple', 'banana', 'melon', 'mango', 'orange'];
-const [fruits1, fruits2, fruits3] = fruits;
+
+// 만약 배열 디스트럭처링에 배열의 길이를 초과한 변수를 선언하면 초과한 범위에 대하여 해당 변수는 undefined가 됨
+const [fruits1, fruits2, fruits3, fruits4, fruits5, fruits6] = fruits;
 console.log(fruits1);
 console.log(fruits2);
 console.log(fruits3);
@@ -40,28 +42,45 @@ console.log('========================================');
 
 /*
     spread 연산자를 활용
-    - 
+    - 배열 디스트럭처링 마지막에 스프레드 연산자를 사용하면 나머지 모든 요소로 새로운 배열을 생성
 */
-
+const [anotherFruits, ...otherFruits] = fruits;
+console.log(anotherFruits);
+console.log(otherFruits);
+console.log(fruits);
 
 
 console.log('========================================');
 
 /*
     객체 디스트럭처링
-    - 
-    - 
+    - 객체의 각 속성을 객체로부터 추출하여 변수에 할당
+    - 할당 기준 키
 */
+// const king = {
+//     name: '이성계',
+//     tombName: '태조',
+//     birth: '1335.11.04.',
+//     death: '1408.06.27.'
+// };
 
+// 객체 디스트럭처링에서는 변수의 순서는 상관없지만, 이름은 반드시 객체의 키의 이름과 같아야함
+// 배열은 순서가 중요하고 키는 중요하지 않음
+const { name, tombName } = king;
+console.log(name);
+console.log(tombName);
 
 
 console.log('========================================');
 
 /*
     spread 연산자를 활용
-    - 
+    - 객체 디스트럭처링 마지막에 스프레드 연산자를 사용하면 나머지 모든 속성으로 새로운 객체를 생성
 */
-
+const { birth, death, ...reftKing } = king;
+console.log(birth);
+console.log(death);
+console.log(reftKing);
 
 
 console.log('========================================');

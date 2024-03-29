@@ -3,9 +3,9 @@
     - function 키워드 대신 화살표(=>)를 사용하여 함수를 생성하는 방법(기본적으로 일회성, 익명 함수)
 */
 
-const func = function (arg1, arg2) {
+let func = function (arg1, arg2) {
 
-};
+}
 
 func = (arg1, arg2) => {
 
@@ -16,11 +16,11 @@ func = (arg1, arg2) => {
 */
 
 // 매개변수가 없을 경우 -> 매개변수의 소괄호 제거할 수 없음
-func = () => { };
+func = () => { }
 
 // 매개변수가 하나일 경우, 매개변수 위치의 소괄호를 제거할 수 있음
-func = (arg) => {  };
-func = arg => {  };
+func = (arg) => {  }
+func = arg => {  }
 
 // 매개변수가 여러개 일 경우, 매개변수 위치의 소괄호를 제거할 수 없음
 // func = (arg1, arg2) => {  }
@@ -62,11 +62,11 @@ func = (name, tomName) => ({
 const pow = (x) => {
     return x * x;
 };
-
 console.log(pow(10) );
 
-const number = [1,2,3,4,5];
-number.forEach(function(value, index) {
+const numbers = [1, 2, 3, 4, 5];
+
+numbers.forEach(function(value, index) {
     console.log(`index : ${index} / value : ${value}`);
 });
 

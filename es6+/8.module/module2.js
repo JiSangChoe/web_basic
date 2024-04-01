@@ -4,6 +4,7 @@
     - 타 모듈에서 export 내보내면 { }를 사용하여 import 해야함, 이름이 같아야함
     - 타 모듈에서 export default로 내보내면 { } 없이 import함, 내보낸 이름과 받아오는 이름이 달라도 됨
     - 터미널에다가 num init 하면 json형태로 설정하는게 나옴 num init --yes 하면 알아서 지정해줌 그리고 type을 지정해주면됨
+    - 여기에서는 package.json에서의 "type" : "module" 이렇게 지정함
 */
 import {exportVariable, exportFunction, exportClass } from './module.mjs';
 console.log(exportVariable);

@@ -62,17 +62,17 @@ class Sample1 {
     constructor(publicField, privateField) {
         this.publicField = publicField;
         this.#privateField = privateField;
-        this.staticPublicField = publicField;
+        // this.staticPublicField = publicField;
         // this.#staticPrivateField = privateField;
     }
 }
 
 const sample1Instance = new Sample1('퍼블릭 필드', '프라이빗 필드');
+
 console.log(sample1Instance);
 // console.log(sample1Instance.#privateField);
+// console.log(sample1Instance.staticPublicField);
 console.log(Sample1.staticPublicField);
-
-
 
 console.log('==================================================');
 

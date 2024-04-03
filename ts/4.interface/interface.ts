@@ -28,7 +28,7 @@ console.log('==================================================');
 /*
     클래스의 타입으로써 인터페이스
 */
-// 인터페이스 IMath 에서는 add라는 함수를 선언하고 a와 b의 타입은 number
+// 인터페이스 IMath 에서는 add라는 함수를 선언하고 매개변수로 a와 b의 타입을 number로 지정
 interface IMath {
     add: (a: number, b: number) => number;
 }
